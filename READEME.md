@@ -9,7 +9,7 @@
 在html的`head`标签， 添加script引用
 
 ```html
-<script src="//dn-ydj-statics.qbox.me/lib/flexible/{version}/flexible.js"></script>
+<script src="//ss.yidejia.com/lib/flexible/{version}/flexible.js"></script>
 ```
 
 然后页面会自动添加移动端的meta标签
