@@ -1,0 +1,9 @@
+{
+    "root": true,
+    "extends": "yidejia",
+    "env": {
+      "browser": true
+    },
+    "rules": {
+    }
+}

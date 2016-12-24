@@ -1,0 +1,33 @@
+{
+  "name": "mtb-flexible",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp",
+    "qn": "qn sync ydj-statics -s ./lib -p lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vega-wong/mtb-flexible.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vega-wong/mtb-flexible/issues"
+  },
+  "homepage": "https://github.com/vega-wong/mtb-flexible#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "gulp-uglify": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-config-yidejia": "^1.1.4",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
+  }
+}
