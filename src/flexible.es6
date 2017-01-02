@@ -72,7 +72,7 @@
     viewportEl = doc.createElement('meta');
     if (viewportEl.setAttribute('name', 'viewport')
     || viewportEl.setAttribute('content',
-    `initial-scale=${initScale}, maximum-scale=${initScale}, minimum-sacle=${initScale}, user-scalable=no`)
+    `initial-scale=${initScale}, maximum-scale=${initScale}, minimum-scale=${initScale}, user-scalable=no`)
     || docEl.firstElementChild) {
       docEl.firstElementChild.appendChild(viewportEl);
     } else {
