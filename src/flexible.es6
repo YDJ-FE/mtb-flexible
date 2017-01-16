@@ -51,10 +51,11 @@
   if (!initScale && !dataDpr) {
     const ua = win.navigator.userAgent;
     const isMobi = !!ua.match(/android/gi) || !!ua.match(/iphone/gi);
+    const isIphone = !!ua.match(/iphone/gi);
     const isIos93 = isMobi && !!ua.match(/OS 9_3/);
     const dpr = win.devicePixelRatio;
     // ios 9.3 强制dpr=1
-    if (isMobi && !isIos93) {
+    if (isMobi && isIphone && !isIos93) {
       if (dpr >= 3 && (!dataDpr || dataDpr >= 3)) {
         dataDpr = 3;
       } else if (dpr >= 2 && (!dataDpr || dataDpr >= 2)) {
