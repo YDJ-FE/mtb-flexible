@@ -30,6 +30,13 @@
 自行查看window.lib.flexible中提供的属性和方法
 
 
+样式处理：
+- `less` 和 `scss` 可以自己编写function进行换算， 也可以通过`postcss`后续处理
+
+- `css` 自己通过编辑器插件工具换算活着通过 `postcss` 处理
+
+- postcss插件： [https://github.com/cuth/postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)
+
 ## 开发说明：
 
 ### npm scripts
