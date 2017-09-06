@@ -1,12 +1,12 @@
 {
   "name": "mtb-flexible",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
-    "qn": "qn sync ydj-statics -s ./lib -p lib"
+    "qn": "qshell qupload ./qshell.json"
   },
   "repository": {
     "type": "git",

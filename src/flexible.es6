@@ -71,10 +71,10 @@
 
   if (docEl.setAttribute('data-dpr', dataDpr) || !viewportEl) {
     viewportEl = doc.createElement('meta');
-    if (viewportEl.setAttribute('name', 'viewport')
-    || viewportEl.setAttribute('content',
-    `initial-scale=${initScale}, maximum-scale=${initScale}, minimum-scale=${initScale}, user-scalable=no`)
-    || docEl.firstElementChild) {
+    if (viewportEl.setAttribute('name', 'viewport') ||
+      viewportEl.setAttribute('content',
+        `initial-scale=${initScale}, maximum-scale=${initScale}, minimum-scale=${initScale}, user-scalable=no`) ||
+      docEl.firstElementChild) {
       docEl.firstElementChild.appendChild(viewportEl);
     } else {
       const tmpDiv = doc.createElement('div');
@@ -114,4 +114,25 @@
     const res = parseFloat(px) / this.rem;
     return typeof px === 'string' && px.match(/px$/) ? `${res}rem` : res;
   };
+
+
+  // IOS10版本以上的user-scalable=no无效处理方案
+  if (!!ua.match(/iphone/gi) && !!ua.match(/OS 1{0-9}_/)) {
+    // Disable pinch zoom on document
+    document.documentElement.addEventListener('touchstart', (event) => {
+      if (event.touches.length > 1) {
+        event.preventDefault();
+      }
+    }, false);
+
+    // Disable double tap on document
+    let lastTouchEnd = 0;
+    document.documentElement.addEventListener('touchend', (event) => {
+      let now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+  }
 }(window, window.lib || (window.lib = {})));
