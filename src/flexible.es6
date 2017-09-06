@@ -117,9 +117,9 @@
 
 
   // IOS10版本以上的user-scalable=no无效处理方案
-  if (!!ua.match(/iphone/gi) && !!ua.match(/OS 1{0-9}_/)) {
+  if (!!win.navigator.userAgent.match(/iphone/gi) && !!win.navigator.userAgent.match(/OS 1[0-9]_/)) {
     // Disable pinch zoom on document
-    document.documentElement.addEventListener('touchstart', (event) => {
+    document.documentElement.addEventListener('touchstart', event => {
       if (event.touches.length > 1) {
         event.preventDefault();
       }
@@ -127,8 +127,8 @@
 
     // Disable double tap on document
     let lastTouchEnd = 0;
-    document.documentElement.addEventListener('touchend', (event) => {
-      let now = (new Date()).getTime();
+    document.documentElement.addEventListener('touchend', event => {
+      const now = (new Date()).getTime();
       if (now - lastTouchEnd <= 300) {
         event.preventDefault();
       }

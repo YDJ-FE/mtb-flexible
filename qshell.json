@@ -3,7 +3,7 @@
   "bucket": "ydj-statics",
   "key_prefix": "lib/",
   "ignore_dir": false,
-  "overwrite": false,
+  "overwrite": true,
   "check_exists": false,
   "check_hash": false,
   "check_size": false,
