@@ -6,10 +6,14 @@
 
 ## USAGE:
 
+# 下载对应版本的flexible.js到您的项目中
+
+[https://github.com/YDJ-FE/mtb-flexible/releases](https://github.com/YDJ-FE/mtb-flexible/releases)
+
 在html的`head`标签， 添加script引用
 
 ```html
-<script src="//ss.yidejia.com/lib/flexible/{version}/flexible.js"></script>
+<script src="{your js path}/flexible.js"></script>
 ```
 
 然后页面会自动添加移动端的meta标签,声明`viewport`属性(默认开启高清方案， 无需手动声明viewport)
