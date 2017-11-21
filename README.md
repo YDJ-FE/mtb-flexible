@@ -6,7 +6,7 @@
 
 ## USAGE:
 
-# 下载对应版本的flexible.js到您的项目中
+下载对应版本的flexible.js到您的项目中
 
 [https://github.com/YDJ-FE/mtb-flexible/releases](https://github.com/YDJ-FE/mtb-flexible/releases)
 
